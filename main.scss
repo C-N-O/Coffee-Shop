@@ -1,0 +1,168 @@
+:root {
+  --primaryBackgroundColor: rgb(219, 195, 163);
+
+  --primaryButtonColor: rgb(102, 140, 255);
+  --secondaryButtonColor: rgb(204, 255, 204);
+
+  --primaryFontFamily: 'Roboto', sans-serif;
+  --secondartFontFamily: 'Sanchez', serif;
+  --tertiaryFontFamily: 'Orbitron', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*********************************** Header CSS**********************/
+/********************************************************************/
+nav {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  background-color: var(--primaryBackgroundColor);
+}
+
+nav .logo {
+  height: 5rem;
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  flex: 5;
+}
+
+.nav-item {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: var(--primaryFontFamily);
+  text-align: center;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: var(--primaryButtonColor);
+}
+
+.start-trial-link {
+  border: 3px solid var(--primaryButtonColor);
+  padding: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 50vh;
+    top: 6vh;
+    background-color: var(--primaryBackgroundColor);
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    font-weight: bold;
+    transform: translateX(0%);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/******************************************* End of Header CSS *******************************/
+/*********************************************************************************************/
+
+.section-1 {
+  height: 100vh;
+  background: url('/images/coffeeBeans.jpeg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-1--container {
+  flex-direction: column;
+  text-align: center;
+}
+
+.section-1--container .title {
+  color: #fff;
+  font-size: 2rem;
+  font-family: var(--secondartFontFamily);
+}
+
+.btn {
+  font-size: 2rem;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.start-trial-btn {
+  color: #fff;
+  background-color: var(--primaryButtonColor);
+}
+
+button.our-brand {
+  background-color: var(--secondaryButtonColor);
+}
+
+.footer {
+  height: 2rem;
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: var(--primaryBackgroundColor);
+}

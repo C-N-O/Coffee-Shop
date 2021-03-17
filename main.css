@@ -1,0 +1,218 @@
+:root {
+  --primaryBackgroundColor: rgb(219, 195, 163);
+  --primaryButtonColor: rgb(102, 140, 255);
+  --secondaryButtonColor: rgb(204, 255, 204);
+  --primaryFontFamily: 'Roboto', sans-serif;
+  --secondartFontFamily: 'Sanchez', serif;
+  --tertiaryFontFamily: 'Orbitron', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*********************************** Header CSS**********************/
+/********************************************************************/
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+  background-color: var(--primaryBackgroundColor);
+}
+
+nav .logo {
+  height: 5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.nav-item {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: var(--primaryFontFamily);
+  text-align: center;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: var(--primaryButtonColor);
+}
+
+.start-trial-link {
+  border: 3px solid var(--primaryButtonColor);
+  padding: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 50vh;
+    top: 6vh;
+    background-color: var(--primaryBackgroundColor);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 25%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+.nav-active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    font-weight: bold;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    font-weight: bold;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/******************************************* End of Header CSS *******************************/
+/*********************************************************************************************/
+.section-1 {
+  height: 100vh;
+  background: url("/images/coffeeBeans.jpeg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-1--container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.section-1--container .title {
+  color: #fff;
+  font-size: 2rem;
+  font-family: var(--secondartFontFamily);
+}
+
+.btn {
+  font-size: 2rem;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.start-trial-btn {
+  color: #fff;
+  background-color: var(--primaryButtonColor);
+}
+
+button.our-brand {
+  background-color: var(--secondaryButtonColor);
+}
+
+.footer {
+  height: 2rem;
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: var(--primaryBackgroundColor);
+}
+/*# sourceMappingURL=main.css.map */
