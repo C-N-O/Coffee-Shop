@@ -1,11 +1,13 @@
 :root {
   --primaryBackgroundColor: rgb(219, 195, 163);
+  --secondaryBackgroundColor: #c2c7c3;
+  --tertiaryBackgroundColor: rgb(77, 77, 77);
 
-  --primaryButtonColor: rgb(102, 140, 255);
+  --primaryButtonColor: rgb(212, 59, 59);
   --secondaryButtonColor: rgb(204, 255, 204);
 
   --primaryFontFamily: 'Roboto', sans-serif;
-  --secondartFontFamily: 'Sanchez', serif;
+  --secondaryFontFamily: 'Sanchez', serif;
   --tertiaryFontFamily: 'Orbitron', sans-serif;
 }
 
@@ -13,6 +15,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 /*********************************** Header CSS**********************/
@@ -66,6 +71,7 @@ nav .logo {
   html,
   body {
     overflow-x: hidden;
+    // scroll-behavior: smooth;
   }
   body {
     position: relative;
@@ -78,9 +84,9 @@ nav .logo {
     background-color: var(--primaryBackgroundColor);
     display: flex;
     flex-direction: column;
-    width: 25%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    width: 40%;
   }
   .nav-links li {
     opacity: 0;
@@ -88,6 +94,14 @@ nav .logo {
 
   .hamburger {
     display: block;
+  }
+
+  #section-2 {
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 20px 0px 20px 0px;
   }
 }
 
@@ -120,7 +134,8 @@ nav .logo {
 /******************************************* End of Header CSS *******************************/
 /*********************************************************************************************/
 
-.section-1 {
+////**********************SECTION 1******************/
+#section-1 {
   height: 100vh;
   background: url('/images/coffeeBeans.jpeg');
   background-size: cover;
@@ -137,7 +152,8 @@ nav .logo {
 .section-1--container .title {
   color: #fff;
   font-size: 2rem;
-  font-family: var(--secondartFontFamily);
+  font-family: var(--secondaryFontFamily);
+  text-shadow: 5px 3px 0 var(--tertiaryBackgroundColor);
 }
 
 .btn {
@@ -157,6 +173,8 @@ button.our-brand {
   background-color: var(--secondaryButtonColor);
 }
 
+///////////////////************SECTION 1 ****************///
+
 .footer {
   height: 2rem;
   font-size: 1.5rem;
@@ -165,4 +183,126 @@ button.our-brand {
   width: 100%;
   text-align: center;
   background-color: var(--primaryBackgroundColor);
+}
+
+#section-2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--secondaryBackgroundColor);
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  background: var(--tertiaryBackgroundColor);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 10px 10px;
+}
+
+// .card::before {
+//   content: '';
+//   position: absolute;
+//   background: var(--secondaryButtonColor);
+//   bottom: -50%;
+//   width: 100%;
+//   height: 100%;
+//   transform: skewY(25deg);
+//   transition: 0.5s;
+// }
+
+// .card:hover::before {
+//   transform: skewY(-0.06turn);
+//   z-index: -1;
+// }
+
+.card-image {
+  // position: relative;
+  width: 25%;
+}
+
+.card-image img {
+  width: 28rem;
+}
+
+.content-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.add-to-cart:link,
+.add-to-cart:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: absolute;
+}
+
+.add-to-cart:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-cart:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-cart-white {
+  background-color: var(--primaryButtonColor);
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 5px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.add-to-cart::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.add-to-cart-white::after {
+  background-color: #fff;
+}
+
+.add-to-cart:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.add-to-cart-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
