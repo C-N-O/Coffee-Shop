@@ -1,12 +1,17 @@
 :root {
-  --primaryBackgroundColor: rgb(219, 195, 163);
-  --secondaryBackgroundColor: #c2c7c3;
-  --tertiaryBackgroundColor: rgb(77, 77, 77);
-  --primaryButtonColor: rgb(212, 59, 59);
-  --secondaryButtonColor: rgb(204, 255, 204);
+  --primaryButtonColor: rgb(60, 71, 228);
+  --secondaryButtonColor: rgb(135, 142, 233);
+  --tertiaryButtonColor: rgb(163, 167, 228);
+  --primaryBackgroundColor: rgb(214, 235, 214);
+  --secondaryBackgroundColor: rgb(204, 255, 204);
+  --tertiaryBackgroundColor: rgb(158, 255, 158);
+  --primaryTextColor: rgb(35, 36, 35);
+  --secondaryTextColor: rgb(137, 141, 137);
+  --tertiaryTextColor: rgb(255, 255, 255);
   --primaryFontFamily: 'Roboto', sans-serif;
   --secondaryFontFamily: 'Sanchez', serif;
   --tertiaryFontFamily: 'Orbitron', sans-serif;
+  --otherFontFamily: 'Montserrat', sans-serif;
 }
 
 * {
@@ -61,6 +66,7 @@ nav .logo {
   font-family: var(--primaryFontFamily);
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .hamburger {
@@ -202,7 +208,7 @@ nav .logo {
   color: #fff;
   font-size: 2rem;
   font-family: var(--secondaryFontFamily);
-  text-shadow: 5px 3px 0 var(--tertiaryBackgroundColor);
+  text-shadow: 5px 3px 0 var(--primaryTextColor);
 }
 
 .btn {
@@ -246,7 +252,7 @@ button.our-brand {
   background-color: var(--secondaryBackgroundColor);
 }
 
-.card {
+#section-2 .card {
   position: relative;
   width: 320px;
   height: 420px;
@@ -279,7 +285,7 @@ button.our-brand {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  color: var(--primaryTextColor);
 }
 
 .add-to-cart:link,
@@ -375,4 +381,179 @@ button.our-brand {
             transform: translateY(0px);
   }
 }
+
+#section-3 {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("./images/bg-top.svg");
+  background-repeat: no-repeat;
+  font-family: var(--otherFontFamily);
+}
+
+#section-3 .title {
+  margin: 0 auto;
+}
+
+#section-3 .title .text {
+  font-size: 2rem;
+  margin: 5px;
+}
+
+#section-3 .plans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#section-3 .plan {
+  width: 300px;
+  height: 450px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+#section-3 .plan:hover {
+  width: 300px;
+  height: 500px;
+  border: 1px solid black;
+  border-radius: 15px;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right bottom, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right bottom, #a3a8f0, #696fdd);
+}
+
+#section-3 .plan .plan-item {
+  text-align: center;
+  padding: 30px 0px 30px 0px;
+  margin: 0 auto;
+  border-bottom: 1px solid black;
+  width: 90%;
+}
+
+.plan button {
+  text-align: center;
+  width: 50%;
+  margin: 10px 25% 0px 25%;
+  font-size: 20px;
+  padding: 5px;
+  background-color: var(--primaryButtonColor);
+  color: #fff;
+  border: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.plan:hover button {
+  color: #000;
+  background: -webkit-gradient(linear, left top, right bottom, from(var(--primaryBackgroundColor)), to(var(--tertiaryBackgroundColor)));
+  background: linear-gradient(to right bottom, var(--primaryBackgroundColor), var(--tertiaryBackgroundColor));
+}
+
+.plan .name {
+  font-size: 2em;
+}
+
+.freq {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.freq p {
+  margin: 0 5px;
+}
+
+/******TOGGLE BTN*********/
+.toggle-container {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  pointer-events: none;
+  margin: 20px 0px;
+}
+
+.toggle-container input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: var(--primaryButtonColor);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  pointer-events: none;
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 5px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.slider::after {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  right: 5px;
+  bottom: 6px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  pointer-events: none;
+  color: #fff;
+}
+
+input:checked + .slider {
+  background-color: var(--primaryButtonColor);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(29px);
+          transform: translateX(29px);
+}
+
+input:checked + .slider:after {
+  /* content: 'on'; */
+  left: 8px;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/******End TOGGLE BTN*********/
 /*# sourceMappingURL=main.css.map */
