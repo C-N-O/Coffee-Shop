@@ -462,3 +462,122 @@ input:checked + .slider:after {
   border-radius: 50%;
 }
 /******End TOGGLE BTN*********/
+
+///*********SECTION 4*******/
+#section-4 {
+  height: 100vh;
+  font-size: 13px;
+  font-family: var(--otherFontFamily);
+}
+
+.container {
+  display: grid;
+  height: 60vh;
+  width: 75vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'a a b c'
+    'd e e c';
+  margin: auto;
+}
+
+.testimonial-1 {
+  grid-area: a;
+
+  background: url('./images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-color: hsl(263, 55%, 52%);
+  background-position: 90% 0%;
+}
+.testimonial-2 {
+  grid-area: b;
+  background: hsl(217, 19%, 35%);
+}
+.testimonial-3 {
+  grid-area: d;
+  background: hsl(0, 0%, 100%);
+}
+.testimonial-4 {
+  grid-area: e;
+  background: hsl(219, 29%, 14%);
+}
+.testimonial-5 {
+  grid-area: c;
+  background: hsl(0, 0%, 100%);
+}
+
+#section-4 .header {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  margin: 10px;
+  border: 1px;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 0px 15px 0.1px hsl(0, 0%, 81%);
+}
+
+.testimonial-1 .name,
+.testimonial-2 .name,
+.testimonial-4 .name {
+  color: hsl(210, 46%, 95%);
+  font-weight: 500;
+}
+
+.testimonial-1 .text,
+.testimonial-2 .text,
+.testimonial-4 .text,
+.testimonial-1 .title,
+.testimonial-2 .title,
+.testimonial-4 .title {
+  color: hsl(210, 46%, 95%);
+  opacity: 0.5;
+}
+
+.testimonial-1 .summary,
+.testimonial-2 .summary,
+.testimonial-4 .summary {
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.testimonial-3 .name,
+.testimonial-5 .name {
+  color: hsl(217, 19%, 35%);
+}
+
+.testimonial-3 .summary,
+.testimonial-5 .summary {
+  color: hsl(217, 19%, 35%);
+  font-weight: 600;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.testimonial-3 .title,
+.testimonial-5 .title,
+.testimonial-3 .text,
+.testimonial-5 .text {
+  color: hsl(217, 19%, 35%);
+  opacity: 0.5;
+}
+
+#section-4 img {
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.testimonial-header {
+  color: var(--primaryButtonColor);
+  font-size: 2rem;
+  font-family: var(--secondaryFontFamily);
+  text-align: center;
+  padding: 20px;
+}
+
+////***END OF SECTION 4 ***/
