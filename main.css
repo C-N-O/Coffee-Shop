@@ -127,6 +127,15 @@ nav .logo {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  #section-3 .plans-container .plans {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .plans .plan {
+    margin: 0 auto;
+  }
   .card {
     margin: 20px 0px 20px 0px;
   }
@@ -395,7 +404,6 @@ button.our-brand {
       -ms-flex-direction: column;
           flex-direction: column;
   background: url("./images/bg-top.svg");
-  background-repeat: no-repeat;
   font-family: var(--otherFontFamily);
 }
 
