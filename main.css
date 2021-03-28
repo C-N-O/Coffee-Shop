@@ -134,7 +134,7 @@ nav .logo {
             flex-direction: column;
   }
   .plans .plan {
-    margin: 0 auto;
+    margin: 20px auto;
   }
   .card {
     margin: 20px 0px 20px 0px;
@@ -480,6 +480,9 @@ button.our-brand {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .freq p {
