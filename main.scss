@@ -204,7 +204,7 @@ button.our-brand {
   justify-content: space-evenly;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--secondaryBackgroundColor);
+  background: linear-gradient(to right, #7862e4, #09a1e2, #a5fecb);
 }
 
 #section-2 .card {
@@ -468,6 +468,7 @@ input:checked + .slider:after {
   height: 100vh;
   font-size: 13px;
   font-family: var(--otherFontFamily);
+  background-color: antiquewhite;
 }
 
 .container {
@@ -581,3 +582,91 @@ input:checked + .slider:after {
 }
 
 ////***END OF SECTION 4 ***/
+
+#section-5 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to right, #70e1f5, #ffd194);
+}
+
+.flip-card-container {
+  height: 300px;
+  width: 250px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(135, 142, 233);
+  transition: all 0.6s;
+  backface-visibility: hidden;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #b79891;
+  transition: all 0.6s;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.front,
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.flip-card-container:hover .front {
+  transform: rotateY(180deg);
+}
+
+.flip-card-container:hover .back {
+  transform: rotateY(0deg);
+}
+
+.front img {
+  width: 250px;
+  height: 220px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.front h1 {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: var(--primaryFontFamily);
+}
+
+.back p {
+  padding: 5px;
+  color: #fff;
+  font-size: 20px;
+  font-family: var(--otherFontFamily);
+  cursor: default;
+}
+
+.back a {
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: yellow;
+}
