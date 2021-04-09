@@ -139,21 +139,16 @@ nav .logo {
   .card {
     margin: 20px 0px 20px 0px;
   }
-  #section-4 {
-    height: 110vh !important;
-  }
   #section-4 .container {
     width: 100vw;
   }
   #section-4 .container .grid {
     height: 400px;
     overflow-y: scroll;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    margin: 5px 5px;
   }
   #section-5 {
-    height: 120vh !important;
+    min-height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
