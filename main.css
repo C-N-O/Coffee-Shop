@@ -139,6 +139,36 @@ nav .logo {
   .card {
     margin: 20px 0px 20px 0px;
   }
+  #section-4 {
+    height: 110vh !important;
+  }
+  #section-4 .container {
+    width: 100vw;
+  }
+  #section-4 .container .grid {
+    height: 400px;
+    overflow-y: scroll;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #section-5 {
+    height: 120vh !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #section-5 .flip-card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 10px;
+  }
 }
 
 .nav-active {

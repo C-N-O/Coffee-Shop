@@ -117,6 +117,31 @@ nav .logo {
   .card {
     margin: 20px 0px 20px 0px;
   }
+
+  #section-4 {
+    height: 110vh !important;
+  }
+
+  #section-4 .container {
+    width: 100vw;
+  }
+
+  #section-4 .container .grid {
+    height: 400px;
+    overflow-y: scroll;
+    width: fit-content;
+  }
+
+  #section-5 {
+    height: 120vh !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #section-5 .flip-card-container {
+    flex-direction: column;
+    margin: 10px;
+  }
 }
 
 .nav-active {
